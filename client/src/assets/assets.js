@@ -1,7 +1,10 @@
 import logo from "./Logo.png";
-
+import search from "./search-icon.png"
+import location from "./location.png"
 export const assets={
-    logo
+    logo,
+    search,
+    location
 };
 
 export const ScholarshipCategories=[
