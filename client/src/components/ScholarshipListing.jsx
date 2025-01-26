@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { AppContext } from "../context/AppContext"
 import ScholarshipCard from "./ScholarshipCard"
 import { assets, ScholarshipAcademic, ScholarshipCategories, ScholarshipFields } from "../assets/assets"
@@ -11,6 +11,25 @@ const ScholarshipListing = () => {
     const [showFilter,setShowFilter]=useState(false)
 
     const [currentPage, setCurrentPage]=useState(1)
+
+    const [selectedCategories,setSelectedCategories]=useState([])
+    const [selectedFields,setSelectedFields]=useState([])
+
+    const [filteredScholarships,setFilteredScholarships]=useState(scholarships)
+
+    const handleCategoryChange=(category)=>{
+        setSelectedCategories(
+            prev=>prev.includes(category)?prev.filter(c=>c!==category):[...prev,category]
+        )
+    }
+
+    const handleFieldChange=(field)=>{
+        setSelectedFields(
+            prev=>prev.includes(field)?prev.filter(c=>c!==field):[...prev,field]
+        )
+    }
+
+    
 
   return (
     <div className="container 2xl:px-20 mx-auto flex flex-col lg:flex-row max-lg:space-y-8 py-8">
@@ -50,7 +69,12 @@ const ScholarshipListing = () => {
                     {
                         ScholarshipCategories.map((category,index)=>(
                             <li className="flex gap-3 items-center" key={index}>
-                                <input className="scale-125" type="checkbox" name="" id=""/>
+                                <input 
+                                className="scale-125" 
+                                type="checkbox" 
+                                onChange={()=>handleCategoryChange(category)}
+                                checked={selectedCategories.includes(category)}
+                                />
                                 {category}
                             </li>
                         ))
@@ -65,7 +89,10 @@ const ScholarshipListing = () => {
                     {
                         ScholarshipFields.map((category,index)=>(
                             <li className="flex gap-3 items-center" key={index}>
-                                <input className="scale-125" type="checkbox" name="" id=""/>
+                                <input className="scale-125" type="checkbox" name="" id=""
+                                onChange={()=>handleFieldChange(category)}
+                                checked={selectedFields.includes(category)}
+                                />
                                 {category}
                             </li>
                         ))
@@ -92,7 +119,7 @@ const ScholarshipListing = () => {
         {/* Scholarship Listing */}
         <section className="w-full lg:w-3/4 text-gray-800 max-lg:px-4 ">
             <h3 className="font-medium text-3xl py-2" id="scholarship-list">Latest Scholarships</h3>
-            <p className="mb-8">A Golden opportunity awais you!</p>
+            <p className="mb-8">A Golden opportunity awaits you!</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                 {scholarships.slice((currentPage-1)*6,currentPage*6).map((scholarship,index)=>(
                     <ScholarshipCard key={index} scholarship={scholarship}/>

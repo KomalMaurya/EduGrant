@@ -22,7 +22,7 @@ const Navbar = () => {
               </div>
               : 
               <div className="flex gap-4 max-sm:text-xs ">
-                <button className='text-gray-600 cursor-pointer'> Login</button>
+                <button className='text-gray-600 cursor-pointer'>Partners Login</button>
                 <button onClick={ e =>openSignIn()} className='bg-emerald-400 text-white px-6 sm:px-9 py-2 cursor-pointer rounded-full'>Login</button>
             </div>
             }
