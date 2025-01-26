@@ -1,10 +1,26 @@
 import logo from "./Logo.png";
 import search from "./search-icon.png"
 import location from "./location.png"
+import people from "./people.jpg"
+import google from "./Google_2015_logo.png"
+import adobe from "./Adobe-social-share-image.jpg"
+import amazon from "./Amazon_logo.svg.png"
+import mahindra from "./Mahindra-Logo-2012-1.png"
+import loreal from "./LOreal-Logo.png"
+import technip from "./TECHNIP_ENERGIES_LOGO.png"
+import microsoft from "./Microsoft_logo_(2012).svg.png"
 export const assets={
     logo,
     search,
-    location
+    location,
+    people,
+    google,
+    adobe,
+    amazon,
+    mahindra,
+    loreal,
+    technip,
+    microsoft
 };
 
 export const ScholarshipCategories=[

@@ -9,7 +9,7 @@ const Navbar = () => {
   const {user}=useUser()
 
   return (
-    <div className='shadow py-4'>
+    <div className='shadow py-2'>
         <div className='container px-4 2xl:px-20 mx-auto flex justify-between items-center'>
             <img src={assets.logo} alt="EduGrant Logo"/>
             {
@@ -22,8 +22,8 @@ const Navbar = () => {
               </div>
               : 
               <div className="flex gap-4 max-sm:text-xs ">
-                <button className='text-gray-600'> Login</button>
-                <button onClick={ e =>openSignIn()} className='bg-emerald-400 text-white px-6 sm:px-9 py-2 rounded-full'>Login</button>
+                <button className='text-gray-600 cursor-pointer'> Login</button>
+                <button onClick={ e =>openSignIn()} className='bg-emerald-400 text-white px-6 sm:px-9 py-2 cursor-pointer rounded-full'>Login</button>
             </div>
             }
         </div>
