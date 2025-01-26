@@ -1,6 +1,22 @@
+import { useContext ,useRef} from "react"
 import { assets } from "../assets/assets"
+import { AppContext } from "../context/AppContext"
 
 const Hero = () => {
+
+    const {setSearchFilter,setIsSearched}=useContext(AppContext)
+
+    const titleRef = useRef(null)
+    const fieldRef = useRef(null)
+
+    const onSearch=()=>{
+        setSearchFilter({
+            title:titleRef.current.value,
+            field:fieldRef.current.value
+        })
+        setIsSearched(true)
+    }
+
   return (
     <div className="container 2xl:px-20 mx-auto mt-10 my-10">
         <div className="bg-gradient-to-r from-emerald-400 to-emerald-950 text-white py-16 text-center  mx-2 rounded-xl ">
@@ -9,19 +25,19 @@ const Hero = () => {
             <div className="flex items-center justify-between bg-white text-gray-600 max-w-xl pl-4 mx-4 sm:mx-auto rounded">
                 <div className="flex items-center ">
                     <img src={assets.search} className="h-4 sm:h-5 opacity-50"/>
-                    <input type="text" placeholder="Search for Scholarships" className="text-black bg-white max-sm:text-xs p-2 rounded outline-none w-full"/>
+                    <input ref={titleRef} type="text" placeholder="Search for Scholarships" className="text-black bg-white max-sm:text-xs p-2 rounded outline-none w-full"/>
                 </div>
                 <div className="flex items-center">
                     <img src={assets.people} className="h-6 sm:h-6 opacity-75"/>
-                    <input type="text" placeholder="Field" className="text-black bg-white max-sm:text-xs p-2 rounded outline-none w-full"/>
+                    <input ref={fieldRef} type="text" placeholder="Field" className="text-black bg-white max-sm:text-xs p-2 rounded outline-none w-full"/>
                 </div>
-                <button className="bg-emerald-400 px-6 py-2 rounded text-white m-1">Search</button>
+                <button onClick={onSearch} className="cursor-pointer bg-emerald-400 px-6 py-2 rounded text-white m-1">Search</button>
             </div>
         </div>
 
         <div className="flex border border-gray-300 shadow-md mx-2 mt-5 p-6 rounded-md">
             <div className=" flex justify-center items-center gap-10 lg:gap-16 flex-wrap"> 
-                <p>Trusted by</p>
+                <p className="font-medium">Trusted by</p>
                 <img src={assets.google} alt="" className="h-6"/>
                 <img src={assets.microsoft} alt="" className="h-6"/>
                 <img src={assets.adobe} alt="" className="h-6"/>

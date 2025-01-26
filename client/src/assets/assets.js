@@ -9,6 +9,7 @@ import mahindra from "./Mahindra-Logo-2012-1.png"
 import loreal from "./LOreal-Logo.png"
 import technip from "./TECHNIP_ENERGIES_LOGO.png"
 import microsoft from "./Microsoft_logo_(2012).svg.png"
+import cross_icon from "./cross-23.png"
 export const assets={
     logo,
     search,
@@ -20,7 +21,8 @@ export const assets={
     mahindra,
     loreal,
     technip,
-    microsoft
+    microsoft,
+    cross_icon
 };
 
 export const ScholarshipCategories=[
@@ -29,6 +31,33 @@ export const ScholarshipCategories=[
     "Group",
     "Mode of Study",
     "Duration"
+]
+
+export const ScholarshipAcademic=[
+    "Merit-Based Scholarships",
+    "Top Achievers Awards",
+    "GPA-Based Scholarships"
+]
+
+export const ScholarshipDemographic=[
+    "Women in STEM/Leadership",
+    "Scholarships for Minorities",
+    "LGBTQ+ Scholarships",
+    "Veterans and Military Families",
+    "Scholarships for Students with Disabilities"
+]
+
+export const ScholarshipFields=[
+    "STEM",
+    "Arts and Humanities",
+    "Medicine and Healthcare",
+    "Law and Legal Studies",
+    "Business and Management",
+    "Social Sciences",
+    "Education and Teaching",
+    "Environmental Science and Sustainability",
+    "Data Science and AI",
+    "Journalism and Mass Communication"
 ]
 
 export const ScholarshipLocations =[
@@ -71,13 +100,74 @@ export const viewApplicationPageData=[
 export const ScholarshipData=[
     {
         _id:'1',
-        title:"",
-        location:"",
-        level:"",
+        title:"STEM",
+        location:"kjrgr",
+        level:"lkefmerlg",
         companyId:{
 
         },
-        description:`
-        `
+        description:`kfnkrtjeinvjfvnjerjegneng
+        `,
+        amount:566,
+        deadline:66457,
+        category:"Engineering"
+    },
+    {
+        _id:'2',
+        title:"STEM",
+        location:"kjrgr",
+        level:"lkefmerlg",
+        companyId:{
+
+        },
+        description:`kfnkrtjeinvjfvnjerjegneng
+        `,
+        amount:566,
+        deadline:66457,
+        category:"Engineering"
+    },
+    {
+        _id:'3',
+        title:"STEM",
+        location:"kjrgr",
+        level:"lkefmerlg",
+        companyId:{
+
+        },
+        description:`kfnkrtjeinvjfvnjerjegneng
+        `,
+        amount:566,
+        deadline:66457,
+        category:"Engineering"
+    },
+    {
+        _id:'4',
+        title:"STEM",
+        location:"kjrgr",
+        level:"lkefmerlg",
+        companyId:{
+
+        },
+        description:`kfnkrtjeinvjfvnjerjegneng
+        `,
+        amount:566,
+        deadline:66457,
+        category:"Engineering"
+    },
+    {
+        _id:'5',
+        title:"STEM",
+        location:"kjrgr",
+        level:"lkefmerlg",
+        companyId:{
+
+        },
+        description:`kfnkrtjeinvjfvnjerjegneng
+        `,
+        amount:566,
+        deadline:66457,
+        category:"Engineering"
     }
+
+
 ];
