@@ -12,9 +12,9 @@ import microsoft from "./Microsoft_logo_(2012).svg.png"
 import cross_icon from "./cross-23.png"
 import left_arrow from "./free-arrow-left-icon-3099-thumb.png"
 import right_arrow from "./free-arrow-right-icon-3098-thumb.png"
-import instagram from "./instagram-logo.png"
+import instagram from "./instagram.png"
 import twitter from "./free-twitter-x.png"
-import linkedin from "./linkedin-circle.svg"
+import linkedin from "./linkedin.png"
 
 
 export const assets={

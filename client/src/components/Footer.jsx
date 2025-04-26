@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex gap-2.5 items-center">
             <img  src={assets.instagram} alt="" className="h-12"/>
             <img src={assets.twitter} alt="" className="h-12"/>
-            <img src={assets.linkedin} alt="" className="h-10"/>
+            <img src={assets.linkedin} alt="" className="h-8"/>
         </div>
     </div>
   )
